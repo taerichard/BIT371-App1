@@ -15,22 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button = (Button) findViewById(R.id.enter_button);
-        TextView username = (TextView) findViewById(R.id.username);
-        TextView pw = (TextView) findViewById(R.id.password);
-
-        button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), UserConfirmationActivity.class);
-                String userName = username.getText().toString();
-                String password = pw.getText().toString();
-                intent.putExtra("username", userName);
-                intent.putExtra("password", password);
-                startActivity((intent));
-
-            }
-        });
 
     }
 }
